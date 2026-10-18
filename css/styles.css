@@ -1,3 +1,4 @@
+/* ==== Variables ==== */
 :root {
     --color-bg: #F6F4FB;
     --color-surface: #FFFFFF;
@@ -11,9 +12,11 @@
     --radius: 16px;
 }
 
+/* ==== Base ==== */
 *, *::before, *::after {
-    box-sizing:border-box;
+    box-sizing: border-box;
 } 
+
 body { 
     margin: 0;
     background-color: var(--color-bg);
@@ -24,4 +27,37 @@ body {
 
 h1, h2, h3 {
     font-family: var(--font-display);
+}
+
+button, input {
+    font: inherit;
+}
+
+/* ==== Contenedor ==== */
+header, main {
+    max-width: 960px;
+    margin-inline: auto;
+    padding-inline: 20px;
+}
+
+/* ==== Cabecera ==== */
+header {
+    padding-top: 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.date {
+    margin: 0;
+    color: var(--color-text-muted);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+h1 {
+    margin: 0;
+    font-size: 40px;
+    line-height: 1;
+    letter-spacing: -0.02em;
 }
