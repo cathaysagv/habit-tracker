@@ -1,0 +1,27 @@
+:root {
+    --color-bg: #F6F4FB;
+    --color-surface: #FFFFFF;
+    --color-text: #1E1A2E;
+    --color-text-muted: #5E5873;
+    --color-border: #E6E1F0;
+    --color-accent: #6D4AE0;
+    --color-streak: #8A4B00;
+    --font-display: 'Bricolage Grotesque', sans-serif;
+    --font-body: 'DM Sans', sans-serif;
+    --radius: 16px;
+}
+
+*, *::before, *::after {
+    box-sizing:border-box;
+} 
+body { 
+    margin: 0;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-body);
+    line-height: 1.5;
+}
+
+h1, h2, h3 {
+    font-family: var(--font-display);
+}
