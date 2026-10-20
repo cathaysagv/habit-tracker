@@ -10,6 +10,9 @@
     --font-display: 'Bricolage Grotesque', sans-serif;
     --font-body: 'DM Sans', sans-serif;
     --radius: 16px;
+    --color-progress-track: #3A3450;
+    --color-progress-fill: #B9A6FF;
+    --color-on-dark-muted: #C9C2DD ;
 }
 
 /* ==== Base ==== */
@@ -60,4 +63,49 @@ h1 {
     font-size: 40px;
     line-height: 1;
     letter-spacing: -0.02em;
+}
+
+/* ==== Tarjeta progreso ==== */
+.progress {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+    padding: 16px;
+    background-color: var(--color-text);
+    color: var(--color-surface);
+    border-radius: var(--radius);
+}
+
+.progress-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.progress-text, .progress-percent {
+    margin: 0;
+}
+
+.progress-text {
+    font-weight: 600;
+}
+
+.progress-percent {
+    font-size: 14px;
+    color: var(--color-on-dark-muted);
+}
+
+.progress-bar {
+    background-color: var(--color-progress-track);
+    height: 8px;
+    border-radius: 999px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    background-color: var(--color-progress-fill);
+    height: 100%;
+    width: 50%;
+    border-radius: 999px;
 }
