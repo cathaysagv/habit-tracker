@@ -12,8 +12,8 @@
     --radius: 16px;
     --color-progress-track: #3A3450;
     --color-progress-fill: #B9A6FF;
-    --color-on-dark-muted: #C9C2DD ;
-    --color-check-border:  #CFC8E0;
+    --color-on-dark-muted: #C9C2DD;
+    --color-check-border: #CFC8E0;
     --color-day-missed: #ECE8F4;
     --color-day-pending: #D6D0E4;  
     --color-accent-hover: #5A3CC9;
@@ -43,6 +43,12 @@ h1, h2, h3 {
 
 button, input {
     font: inherit;
+}
+
+button:focus-visible,
+input:focus-visible {
+    outline: 3px solid var(--color-accent);
+    outline-offset: 3px;
 }
 
 /* ==== Contenedor ==== */
@@ -247,7 +253,7 @@ h1 {
     font-weight: 700;
 }
 
-/* ==== Botón nuevo hábito==== */
+/* ==== Botón nuevo hábito ==== */
 
 .new-habit-btn {
     width: 100%;
@@ -264,11 +270,6 @@ h1 {
 
 .new-habit-btn:hover {
     background-color: var(--color-accent-hover);
-}
-
-.new-habit-btn:focus-visible {
-    outline: 3px solid var(--color-accent);
-    outline-offset: 3px;
 }
 
 /* ==== Formulario ==== */
@@ -311,11 +312,6 @@ h1 {
     padding: 0 14px;
 }
 
-.form-field input:focus-visible {
-    outline: 3px solid var(--color-accent);
-    outline-offset: 2px;
-}
-
 .habit-form fieldset {
     margin: 0;
     padding: 0;
@@ -349,11 +345,6 @@ h1 {
     box-shadow: 0 0 0 2px var(--color-text);
 }
 
-.color-options input:focus-visible {
-    outline: 3px solid var(--color-accent);
-    outline-offset: 2px;
-}
-
 .form-actions {
     display: flex;
     gap: 8px;
@@ -383,17 +374,12 @@ h1 {
     background-color: var(--color-accent-hover);
 }
 
-.btn-cancel:focus-visible, .btn-save:focus-visible {
-    outline: 3px solid var(--color-accent);
-    outline-offset: 2px;
-}
-
-/* ==== Pantalla vacia ==== */
+/* ==== Pantalla vacía ==== */
 
 .empty-state {
     display: flex;
     flex-direction: column;
-    align-items:center;
+    align-items: center;
     margin-top: 24px;
     background-color: var(--color-surface);
     border: 1px solid var(--color-border);
@@ -458,14 +444,4 @@ h1 {
 
 .btn-load-examples:hover {
     background-color: var(--color-bg);
-}
-
-.btn-load-examples:focus-visible{
-    outline: 3px solid var(--color-accent);
-    outline-offset: 2px;
-}
-
-.btn-first-habit:focus-visible {
-     outline: 3px solid var(--color-accent);
-     outline-offset: 2px;
 }
