@@ -32,15 +32,19 @@
 
         <form class="habit-form" hidden>
             <h2>Nuevo hábito</h2>
-            <label for="habit-name-input">Nombre del hábito</label>
-            <input type="text" id="habit-name-input" name="name" required maxlength="40" placeholder="Ej.: Meditar 10 minutos">
+            <div class="form-field">
+                <label for="habit-name-input">Nombre del hábito</label>
+                <input type="text" id="habit-name-input" name="name" required maxlength="40" placeholder="Ej.: Meditar 10 minutos">
+            </div>
             <fieldset>
                 <legend>Color</legend>
-                <input type="radio" name="color" value="#6D4AE0" aria-label="Violeta" checked>
-                <input type="radio" name="color" value="#2B7FD9" aria-label="Azul">
-                <input type="radio" name="color" value="#1F9E89" aria-label="Verde azulado">
-                <input type="radio" name="color" value="#D9467A" aria-label="Rosa">
-                <input type="radio" name="color" value="#E08A00" aria-label="Ámbar">                            
+                <div class="color-options">
+                    <input type="radio" name="color" value="#6D4AE0" style="--swatch: #6D4AE0" aria-label="Violeta" checked>
+                    <input type="radio" name="color" value="#2B7FD9" style="--swatch: #2B7FD9" aria-label="Azul">
+                    <input type="radio" name="color" value="#1F9E89" style="--swatch: #1F9E89" aria-label="Verde azulado">
+                    <input type="radio" name="color" value="#D9467A" style="--swatch: #D9467A" aria-label="Rosa">
+                    <input type="radio" name="color" value="#E08A00" style="--swatch: #E08A00" aria-label="Ámbar">  
+                </div>                          
             </fieldset>
             
             <div class="form-actions">
