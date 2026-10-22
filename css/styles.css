@@ -13,6 +13,7 @@
     --color-progress-track: #3A3450;
     --color-progress-fill: #B9A6FF;
     --color-on-dark-muted: #C9C2DD ;
+    --color-check-border:  #CFC8E0;
 }
 
 /* ==== Base ==== */
@@ -108,4 +109,88 @@ h1 {
     height: 100%;
     width: 50%;
     border-radius: 999px;
+}
+
+/* ==== Tarjeta de hábitos ==== */
+
+.habits {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.habits h2 {
+    color: var(--color-text-muted);
+    font-family: var(--font-body);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.habit-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.habit-card {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 14px 14px 14px 16px;
+}
+
+.habit-main {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.habit-color {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--color-accent);
+    flex-shrink: 0;
+}
+
+.habit-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    flex-grow: 1;
+    min-width: 0;
+}
+
+.habit-name {
+    margin: 0;
+    font-family: var(--font-body);
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.habit-streak {
+    margin: 0;
+    font-size: 13px;
+    color: var(--color-streak);
+}
+
+.habit-check {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 2px solid var(--color-check-border);
+    background-color: var(--color-surface);
+    padding: 0;
+    cursor: pointer;
+    flex-shrink: 0;
 }
