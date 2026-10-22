@@ -14,6 +14,8 @@
     --color-progress-fill: #B9A6FF;
     --color-on-dark-muted: #C9C2DD ;
     --color-check-border:  #CFC8E0;
+    --color-day-missed: #ECE8F4;
+    --color-day-pending: #D6D0E4;  
 }
 
 /* ==== Base ==== */
@@ -193,4 +195,48 @@ h1 {
     padding: 0;
     cursor: pointer;
     flex-shrink: 0;
+}
+
+.habit-week {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 6px;
+}
+
+.day {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+.day-label {
+    font-size: 11px;
+    color: var(--color-text-muted);
+}
+
+.day-mark {
+    width: 100%;
+    height: 8px;
+    border-radius: 4px;
+}
+
+.day.done .day-mark {
+    background-color: var(--color-accent);
+}
+
+.day.missed .day-mark {
+    background-color: var(--color-day-missed);
+}
+
+.day.pending .day-mark {
+    border: 1px dashed var(--color-day-pending);
+}
+
+.day.today .day-label {
+    color: var(--color-text);
+    font-weight: 700;
 }
