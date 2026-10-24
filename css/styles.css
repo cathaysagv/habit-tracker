@@ -445,3 +445,25 @@ h1 {
 .btn-load-examples:hover {
     background-color: var(--color-bg);
 }
+
+/* ==== Escritorio ==== */
+
+@media (min-width: 768px) {
+    .habit-list {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .new-habit-btn {
+        width: auto;
+        padding-inline: 32px;
+    }
+
+    header {
+        padding-top: 48px;
+    }
+
+    h1 {
+        font-size: 48px;
+    }
+}
