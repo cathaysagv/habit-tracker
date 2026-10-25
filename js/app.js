@@ -66,16 +66,17 @@ function renderHabits() {
 
   habits.forEach((habit) => {
     const card = template.content.cloneNode(true);
+    const checkButton = card.querySelector(".habit-check");
 
     card.querySelector(".habit-name").textContent = habit.name;
     card
       .querySelector(".habit-card")
       .style.setProperty("--habit-color", habit.color);
-    card
-      .querySelector(".habit-check")
-      .setAttribute("aria-label", `Marcar ${habit.name} como hecho`);
 
-    card.querySelector(".habit-check").addEventListener("click", () => {
+    checkButton.setAttribute("aria-label", `Marcar ${habit.name} como hecho`);
+    checkButton.setAttribute("aria-pressed", isDoneOn(habit, today));
+
+    checkButton.addEventListener("click", () => {
       toggleHabit(habit.id);
     });
 

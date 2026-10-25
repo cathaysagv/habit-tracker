@@ -207,6 +207,29 @@ h1 {
     padding: 0;
     cursor: pointer;
     flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.habit-check svg {
+    display: none;
+    width: 20px;
+    height: 20px;
+    fill: none;
+    stroke: var(--color-surface);
+    stroke-width: 3;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.habit-check[aria-pressed="true"] {
+    background-color: var(--habit-color, var(--color-accent));
+    border-color: var(--habit-color, var(--color-accent));
+}
+
+.habit-check[aria-pressed="true"] svg {
+    display: block;
 }
 
 .habit-week {
