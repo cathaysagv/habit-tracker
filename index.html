@@ -70,62 +70,63 @@
             <h2>Tus hábitos</h2>
 
             <ul class="habit-list">
-                <li class="habit-card">
-
-                    <div class="habit-main">
-                        <span class="habit-color" aria-hidden="true"></span>
-                        <div class="habit-info">
-                            <h3 class="habit-name">Leer 20 minutos</h3>
-                            <p class="habit-streak">Racha de 12 días</p>
-                        </div>
-                        
-                        <button type="button" class="habit-check" aria-label="Marcar Leer 20 minutos como hecho"></button>
-                    </div>
-
-                    <ol class="habit-week" aria-hidden="true">
-                        <li class="day done">
-                            <span class="day-label">L</span>
-                            <span class="day-mark"></span>
-                        </li>
-                        
-                        <li class="day done">
-                            <span class="day-label">M</span>
-                            <span class="day-mark"></span>
-                        </li>
-
-                        <li class="day done">
-                            <span class="day-label">X</span>
-                            <span class="day-mark"></span>
-                        </li>
-
-                        <li class="day done">
-                            <span class="day-label">J</span>
-                            <span class="day-mark"></span>
-                        </li>
-
-                        <li class="day pending today">
-                            <span class="day-label">V</span>
-                            <span class="day-mark"></span>
-                        </li>
-
-                        <li class="day pending">
-                            <span class="day-label">S</span>
-                            <span class="day-mark"></span>
-                        </li>
-
-                        <li class="day pending">
-                            <span class="day-label">D</span>
-                            <span class="day-mark"></span>
-                        </li>
-                    </ol>
-
-                </li>
+                
             </ul>
         </section>
 
         <button type="button" class="new-habit-btn">Nuevo hábito</button>
        
     </main>
+
+    <template id="habit-template">
+        <li class="habit-card">
+
+            <div class="habit-main">
+                <span class="habit-color" aria-hidden="true"></span>
+                <div class="habit-info">
+                    <h3 class="habit-name">Leer 20 minutos</h3>
+                    <p class="habit-streak">Racha de 12 días</p>
+                </div>
+                
+                <button type="button" class="habit-check" aria-label="Marcar Leer 20 minutos como hecho"></button>
+            </div>
+            <ol class="habit-week" aria-hidden="true">
+                <li class="day done">
+                    <span class="day-label">L</span>
+                    <span class="day-mark"></span>
+                </li>
+                <li class="day done">
+                    <span class="day-label">M</span>
+                    <span class="day-mark"></span>
+                </li>
+                
+                <li class="day done">
+                    <span class="day-label">X</span>
+                    <span class="day-mark"></span>
+                </li>
+                
+                <li class="day done">
+                    <span class="day-label">J</span>
+                    <span class="day-mark"></span>
+                </li>
+
+                <li class="day pending today">
+                     <span class="day-label">V</span>
+                     <span class="day-mark"></span>
+                </li>
+                
+                <li class="day pending">
+                    <span class="day-label">S</span>
+                    <span class="day-mark"></span>
+                </li>
+                
+                <li class="day pending">
+                    <span class="day-label">D</span>
+                    <span class="day-mark"></span>
+                </li>
+            </ol>
+        </li>
+    </template>
     
     
 </body>

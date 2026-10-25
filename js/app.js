@@ -46,4 +46,24 @@ function renderProgress() {
   document.querySelector(".progress-fill").style.width = `${percent}%`;
 }
 
+function renderHabits() {
+  const list = document.querySelector(".habit-list");
+  const template = document.querySelector("#habit-template");
+  list.innerHTML = "";
+
+  habits.forEach((habit) => {
+    const card = template.content.cloneNode(true);
+
+    card.querySelector(".habit-name").textContent = habit.name;
+    card.querySelector(".habit-color").style.backgroundColor = habit.color;
+    card
+      .querySelector(".habit-check")
+      .setAttribute("aria-label", `Marcar ${habit.name} como hecho`);
+
+    list.append(card);
+  });
+}
+
+// ==== Inicio ====
 renderProgress();
+renderHabits();
