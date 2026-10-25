@@ -30,6 +30,19 @@ function isDoneOn(habit, date) {
   return habit.completedDates.includes(date);
 }
 
+function toggleHabit(id) {
+  const habit = habits.find((habit) => habit.id === id);
+  if (isDoneOn(habit, today)) {
+    habit.completedDates = habit.completedDates.filter(
+      (date) => date !== today,
+    );
+  } else {
+    habit.completedDates.push(today);
+  }
+  renderProgress();
+  renderHabits();
+}
+
 // ==== Pintar ====
 function renderProgress() {
   const doneCount = habits.filter((habit) => isDoneOn(habit, today)).length;
@@ -61,6 +74,10 @@ function renderHabits() {
     card
       .querySelector(".habit-check")
       .setAttribute("aria-label", `Marcar ${habit.name} como hecho`);
+
+    card.querySelector(".habit-check").addEventListener("click", () => {
+      toggleHabit(habit.id);
+    });
 
     list.append(card);
   });
