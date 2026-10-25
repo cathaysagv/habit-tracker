@@ -173,7 +173,7 @@ h1 {
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    background-color: var(--color-accent);
+    background-color: var(--habit-color, var(--color-accent));
     flex-shrink: 0;
 }
 
@@ -237,7 +237,7 @@ h1 {
 }
 
 .day.done .day-mark {
-    background-color: var(--color-accent);
+    background-color: var(--habit-color, var(--color-accent));
 }
 
 .day.missed .day-mark {

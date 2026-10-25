@@ -55,7 +55,9 @@ function renderHabits() {
     const card = template.content.cloneNode(true);
 
     card.querySelector(".habit-name").textContent = habit.name;
-    card.querySelector(".habit-color").style.backgroundColor = habit.color;
+    card
+      .querySelector(".habit-card")
+      .style.setProperty("--habit-color", habit.color);
     card
       .querySelector(".habit-check")
       .setAttribute("aria-label", `Marcar ${habit.name} como hecho`);
