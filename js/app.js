@@ -29,3 +29,21 @@ const today = formatDate(new Date());
 function isDoneOn(habit, date) {
   return habit.completedDates.includes(date);
 }
+
+// ==== Pintar ====
+function renderProgress() {
+  const doneCount = habits.filter((habit) => isDoneOn(habit, today)).length;
+  const total = habits.length;
+
+  let percent = 0;
+  if (total > 0) {
+    percent = Math.round((doneCount / total) * 100);
+  }
+
+  document.querySelector(".progress-text").textContent =
+    `${doneCount} de ${total} hábitos hechos`;
+  document.querySelector(".progress-percent").textContent = `${percent}%`;
+  document.querySelector(".progress-fill").style.width = `${percent}%`;
+}
+
+renderProgress();
