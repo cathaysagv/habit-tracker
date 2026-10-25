@@ -29,3 +29,7 @@ function formatDate(date) {
 
 const today = formatDate(new Date());
 console.log(today);
+
+function isDoneOn(habit, date) {
+    return habit.completedDates.includes(date);
+}
